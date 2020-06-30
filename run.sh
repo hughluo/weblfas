@@ -5,3 +5,5 @@ sudo apt-get install python3-pip -y && pip3 install -r requirements.txt
 sudo apt-get install wget -y
 wget -O target.mp3 $3
 python3 weblfas.py && python3 parser.py
+curl --upload-file transcript.csv https://transfer.sh/transcript.csv
+
