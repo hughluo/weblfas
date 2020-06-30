@@ -207,5 +207,7 @@ class RequestApi(object):
 # 注意：如果出现requests模块报错："NoneType" object has no attribute 'read', 请尝试将requests模块更新到2.20.0或以上版本(本demo测试版本为2.20.0)
 # 输入讯飞开放平台的appid，secret_key和待转写的文件路径
 if __name__ == '__main__':
-    api = RequestApi(appid="", secret_key="", upload_file_path=r"./target.mp3")
+    appid = os.environ['WEBLFAS_APP_ID']
+    secret_key = os.environ['WEBLFAS_SECRET_KEY']
+    api = RequestApi(appid=appid, secret_key=secret_key, upload_file_path=r"./target.mp3")
     api.all_api_request()
